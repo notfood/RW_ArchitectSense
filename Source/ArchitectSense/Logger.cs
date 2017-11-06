@@ -21,7 +21,7 @@ namespace ArchitectSense
 
         private string FormatMessage(string msg, params object[] args)
         {
-            return $"{_identifier} :: {string.Format(msg, args)}";
+            return String.Format ("{0} :: {1}", _identifier, string.Format (msg, args));
         }
 
         public void Warning(string msg, params object[] args)

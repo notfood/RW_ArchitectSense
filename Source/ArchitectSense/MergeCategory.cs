@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Verse;
-using static ArchitectSense.DesignatorUtility;
 
 namespace ArchitectSense
 {
@@ -22,10 +21,10 @@ namespace ArchitectSense
 
         public void Apply()
         {
-            var fromCategory = ResolveCategory(from);
-            var toCategory = ResolveCategory(to);
+            var fromCategory = DesignatorUtility.ResolveCategory(from);
+            var toCategory = DesignatorUtility.ResolveCategory(to);
             Controller.Logger.Debug( "Merging {0} into {1}", fromCategory, toCategory);
-            MergeDesignationCategories(toCategory, fromCategory);
+            DesignatorUtility.MergeDesignationCategories(toCategory, fromCategory);
         }
     }
 }
